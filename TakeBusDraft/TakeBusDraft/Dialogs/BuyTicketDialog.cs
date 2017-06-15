@@ -88,7 +88,7 @@ namespace TakeBusDraft.Dialogs
                                                 },
                                        items: new List<ReceiptItem> { new ReceiptItem() {Title = "Стоимость билета:" },
                                        new ReceiptItem() {Title = "Сервисный сбор:" } },
-                                       tap: new CardAction(ActionTypes.PostBack, title: Resources.Save, value: Resources.Save),
+                                       tap: new CardAction(ActionTypes.PostBack, title: Resources.Save, value: Resources.Save)
                                        );
 
             var message = context.MakeMessage();
