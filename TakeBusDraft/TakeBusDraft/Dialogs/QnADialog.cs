@@ -91,7 +91,7 @@ namespace TakeBusDraft.Dialogs
                     (
                         title: Resources.NoAnswerCard,
                         buttons: new List<CardAction>
-                        { new CardAction(type: ActionTypes.PostBack, title: Resources.Yes, value: Resources.AnswerNotFound) }
+                        { new CardAction(type: ActionTypes.PostBack, title: Resources.Yes, value: "-1") }
                     );
 
                 message.Attachments.Add(noanswercard.ToAttachment());
@@ -106,7 +106,7 @@ namespace TakeBusDraft.Dialogs
            
             var response = await result;
 
-            if (response.Text == Resources.AnswerNotFound)
+            if (response.Text == "-1")
             {
                await context.PostAsync(Resources.NoAnswerCardMessage);
 
