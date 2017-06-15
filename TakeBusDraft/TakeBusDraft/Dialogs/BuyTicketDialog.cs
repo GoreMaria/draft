@@ -72,25 +72,25 @@ namespace TakeBusDraft.Dialogs
 
             var price = newTicket.CalculatePrice();
 
-            //var ticketReceipt = new ReceiptCard(title: Resources.TicketTitle,
-            //                           facts: new List<Fact>
-            //                                  {
-            //                                     new Fact(Resources.FromField, newTicket.From),
-            //                                     new Fact(Resources.ToField, newTicket.To),
-            //                                     new Fact(Resources.DateField, newTicket.Date + Resources.Year),
-            //                                     new Fact(Resources.TimeField, newTicket.Time)
-            //                                  },
-            //                           total: price.ToString() + Resources.Currency,
-            //                           buttons: new List<CardAction>
-            //                                    {
-            //                                        new CardAction(ActionTypes.PostBack, title: Resources.Buy, value: Resources.Buy), // or OpenUrl
-            //                                        new CardAction(ActionTypes.PostBack, title: Resources.Save, value: Resources.Save)
-            //                                    }
-            //                           );
+            var ticketReceipt = new ReceiptCard(title: Resources.TicketTitle,
+                                       facts: new List<Fact>
+                                              {
+                                                 new Fact(Resources.FromField, newTicket.From),
+                                                 new Fact(Resources.ToField, newTicket.To),
+                                                 new Fact(Resources.DateField, newTicket.Date + Resources.Year),
+                                                 new Fact(Resources.TimeField, newTicket.Time) }
+                                       //       },
+                                       //total: price.ToString() + Resources.Currency,
+                                       //buttons: new List<CardAction>
+                                       //         {
+                                       //             new CardAction(ActionTypes.PostBack, title: Resources.Buy, value: Resources.Buy), // or OpenUrl
+                                       //             new CardAction(ActionTypes.PostBack, title: Resources.Save, value: Resources.Save)
+                                       //         }
+                                       );
 
-            //var message = context.MakeMessage();
-            //message.Attachments.Add(ticketReceipt.ToAttachment());
-            await context.PostAsync(newTicket.Time);
+            var message = context.MakeMessage();
+            message.Attachments.Add(ticketReceipt.ToAttachment());
+            await context.PostAsync(message);
 
             context.Wait(ReсeiptAnswerReceiver);
 
