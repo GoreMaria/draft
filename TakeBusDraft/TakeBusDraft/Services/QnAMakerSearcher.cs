@@ -1,9 +1,13 @@
-﻿using Microsoft.Bot.Connector;
+﻿using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Web;
 using TakeBusDraft.Classes;
 
@@ -11,10 +15,11 @@ namespace TakeBusDraft.Services
 {
     public class QnAMakerSearcher
     {
+     
         
-        public QnAAnswer Search(string text)
+        public List<QnAAnswer> Search(string text)
         {
-           QnAAnswer QnAresponse;
+           List<QnAAnswer> QnAresponse;
            string response;
 
             //Build the URI
@@ -22,7 +27,7 @@ namespace TakeBusDraft.Services
             var builder = new UriBuilder($"{qnamakerUriBase}/knowledgebases/{ServiceKeys.knowledgebaseId}/generateAnswer");
 
             //Add the question as part of the body
-            var postBody = $"{{\"question\": \"{text}\"}}";
+            var postBody = $"{{\"question\": \"{text}\",\"top\": \""+3+"\"}}";
 
             //Send the POST request
             using (WebClient client = new WebClient())
@@ -39,7 +44,9 @@ namespace TakeBusDraft.Services
             try
             {
                 var res = JsonConvert.DeserializeObject<QnAAnswers>(response);
-                QnAresponse = res.Answers[0];
+                QnAresponse = res.Answers;
+                
+
             }
             catch
             {
@@ -49,6 +56,5 @@ namespace TakeBusDraft.Services
 
             return QnAresponse;
         }
-
     }
 }

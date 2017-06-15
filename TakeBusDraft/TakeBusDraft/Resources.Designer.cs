@@ -79,7 +79,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Узнать чем я могу помочь.
+        ///   Looks up a localized string similar to Хочу узнать стоимость билета.
         /// </summary>
         internal static string _commonDialogCommand {
             get {
@@ -106,11 +106,110 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Оплатить .
+        /// </summary>
+        internal static string Buy {
+            get {
+                return ResourceManager.GetString("Buy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чтобы оплатить билет, пожалуйста войдите в личный кабинет: https://www.takebus.ru/auth/login.
+        /// </summary>
+        internal static string BuyReply {
+            get {
+                return ResourceManager.GetString("BuyReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Для связи с call-центром, пожалуйста, позвоните нам по телефону: x-xxx-xxx.
+        /// </summary>
+        internal static string CallCenter {
+            get {
+                return ResourceManager.GetString("CallCenter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to руб..
+        /// </summary>
+        internal static string Currency {
+            get {
+                return ResourceManager.GetString("Currency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Какая дата?.
+        /// </summary>
+        internal static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дата поездки:.
+        /// </summary>
+        internal static string DateField {
+            get {
+                return ResourceManager.GetString("DateField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to До свидания, обращайтесь еще!.
         /// </summary>
         internal static string EndMessage {
             get {
                 return ResourceManager.GetString("EndMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Мы смогли ответить на ваш вопрос?.
+        /// </summary>
+        internal static string FeedbackQuesion {
+            get {
+                return ResourceManager.GetString("FeedbackQuesion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Спасибо за ваш отзыв!.
+        /// </summary>
+        internal static string FeedbackThanksMessage {
+            get {
+                return ResourceManager.GetString("FeedbackThanksMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Отлично! Из какого города вы хотите выехать?.
+        /// </summary>
+        internal static string From {
+            get {
+                return ResourceManager.GetString("From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Город отправления:.
+        /// </summary>
+        internal static string FromField {
+            get {
+                return ResourceManager.GetString("FromField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Чем еще я могу вам помочь?.
+        /// </summary>
+        internal static string HelpMessage {
+            get {
+                return ResourceManager.GetString("HelpMessage", resourceCulture);
             }
         }
         
@@ -124,20 +223,119 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Выберите одну из опций или напишите мне свой вопрос:.
+        ///   Looks up a localized string similar to Нет.
         /// </summary>
-        internal static string MenuSubtitle {
+        internal static string No {
             get {
-                return ResourceManager.GetString("MenuSubtitle", resourceCulture);
+                return ResourceManager.GetString("No", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Чем еще я могу вам помочь?.
+        ///   Looks up a localized string similar to Вы не нашли подходящий ответ?.
         /// </summary>
-        internal static string MenuTitle {
+        internal static string NoAnswerCard {
             get {
-                return ResourceManager.GetString("MenuTitle", resourceCulture);
+                return ResourceManager.GetString("NoAnswerCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Очень сожалеем! Позвоните нам по телефону x-xxx-xxx.
+        /// </summary>
+        internal static string NoAnswerCardMessage {
+            get {
+                return ResourceManager.GetString("NoAnswerCardMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подходящий ответ.
+        /// </summary>
+        internal static string PossibleAnswerCard {
+            get {
+                return ResourceManager.GetString("PossibleAnswerCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сохранить.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Спасибо за использование нашего сервиса!.
+        /// </summary>
+        internal static string SaveReply {
+            get {
+                return ResourceManager.GetString("SaveReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Спасибо! Обращайтесь еще..
+        /// </summary>
+        internal static string ThankYouMessage {
+            get {
+                return ResourceManager.GetString("ThankYouMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ваш билет.
+        /// </summary>
+        internal static string TicketTitle {
+            get {
+                return ResourceManager.GetString("TicketTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to В какое время?.
+        /// </summary>
+        internal static string Time {
+            get {
+                return ResourceManager.GetString("Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Время отправления:.
+        /// </summary>
+        internal static string TimeField {
+            get {
+                return ResourceManager.GetString("TimeField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to А в какой город направляетесь?.
+        /// </summary>
+        internal static string To {
+            get {
+                return ResourceManager.GetString("To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Город прибытия:.
+        /// </summary>
+        internal static string ToField {
+            get {
+                return ResourceManager.GetString("ToField", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выберите одну из опций или напишите мне свой вопрос:.
+        /// </summary>
+        internal static string TryOptions {
+            get {
+                return ResourceManager.GetString("TryOptions", resourceCulture);
             }
         }
         
@@ -147,6 +345,24 @@ namespace TakeBusDraft {
         internal static string WelcomeMessage {
             get {
                 return ResourceManager.GetString("WelcomeMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2017 г..
+        /// </summary>
+        internal static string Year {
+            get {
+                return ResourceManager.GetString("Year", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Да.
+        /// </summary>
+        internal static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
     }

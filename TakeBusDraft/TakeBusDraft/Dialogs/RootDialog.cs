@@ -3,6 +3,13 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
 using System.Collections.Generic;
+using TakeBusDraft.Services;
+using TakeBusDraft.Classes;
+using System.Net.Http;
+using System.Text;
+using System.Net.Http.Headers;
+using System.Web;
+using System.Text.RegularExpressions;
 
 namespace TakeBusDraft.Dialogs
 {
@@ -21,17 +28,17 @@ namespace TakeBusDraft.Dialogs
             await context.PostAsync(Resources.WelcomeMessage); // send message to user
            
             // create message
-            var message = PopulateMenuMesage(context.MakeMessage(), title:Resources.IntroMessage);
+            var message = PopulateMenuMessage(context.MakeMessage(), title:Resources.IntroMessage);
             //post message to user
             await context.PostAsync(message);
             context.Wait(MenuReplyReceiver);
         }
 
         // create menu for initial message
-        private IMessageActivity PopulateMenuMesage(IMessageActivity message, string title=null, string subtitle=null)
+        private IMessageActivity PopulateMenuMessage(IMessageActivity message, string title=null, string subtitle=null)
         {
             // create menu by ThumbnailCard
-            var menu = new ThumbnailCard(title: title, subtitle: subtitle, text: Resources.MenuSubtitle,
+            var menu = new ThumbnailCard(title: title, subtitle: subtitle, text: Resources.TryOptions,
                 buttons: new List<CardAction>
                 {
                     new CardAction(type: ActionTypes.PostBack,  title:Resources._commonDialogCommand, value:Resources._commonDialogCommand),
@@ -49,33 +56,47 @@ namespace TakeBusDraft.Dialogs
             var response = await result;
 
             if(response.Text==Resources._commonDialogCommand)
-            { }
+            {
+               await context.Forward(new BuyTicketDialog(),DialogEnded,response,context.CancellationToken);
+            }
             else if(response.Text==Resources._supportDialogCommand)
-            { }
+            {
+                await context.PostAsync(Resources.CallCenter);
+                await context.PostAsync(Resources.HelpMessage);
+                context.Wait(MenuReplyReceiver);
+
+            }
             else if(response.Text==Resources._cancelDialogCommand)
             {
                 await context.PostAsync(Resources.EndMessage);
                 context.Done<object>(null);
             }
-            else { await context.Forward(new QnADialog(), DialogEnded, response, context.CancellationToken); }
+            else {
+                // use regular expressions, or luis
+
+                if (response.Text.Contains("хорошо") || response.Text.Contains("спасибо") || response.Text.Contains("до свидания") || response.Text.Contains("ничем"))
+                {
+                    await context.PostAsync(Resources.ThankYouMessage);
+                   // context.Done<object>(null);
+                }
+                else
+                {
+                    await context.Forward(new QnADialog(), DialogEnded, response, context.CancellationToken);
+
+                }
+
+                }
         }
+
 
         private async Task DialogEnded(IDialogContext context, IAwaitable<object> result)
         {
-            var dialogDone = await result;
-
-            if (!(bool)dialogDone)
-            {
-                var message = PopulateMenuMesage(context.MakeMessage(), title: Resources.MenuTitle);
-                await context.PostAsync(message, context.CancellationToken);
-            }
-            else {
-                
-            }
-
+            await context.PostAsync(Resources.HelpMessage);
             context.Wait(MenuReplyReceiver);
 
         }
+
+        
 
     }
 }

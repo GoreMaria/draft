@@ -120,20 +120,92 @@
   <data name="AnswerNotFound" xml:space="preserve">
     <value>К сожалению мне не удалось вас понять. Пожалуйста повторите запрос или позвоните нам по телефону: +7 (495) 642-35-04</value>
   </data>
+  <data name="Buy" xml:space="preserve">
+    <value>Оплатить </value>
+  </data>
+  <data name="BuyReply" xml:space="preserve">
+    <value>Чтобы оплатить билет, пожалуйста войдите в личный кабинет: https://www.takebus.ru/auth/login</value>
+  </data>
+  <data name="CallCenter" xml:space="preserve">
+    <value>Для связи с call-центром, пожалуйста, позвоните нам по телефону: x-xxx-xxx</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>руб.</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Какая дата?</value>
+  </data>
+  <data name="DateField" xml:space="preserve">
+    <value>Дата поездки:</value>
+  </data>
   <data name="EndMessage" xml:space="preserve">
     <value>До свидания, обращайтесь еще!</value>
+  </data>
+  <data name="FeedbackQuesion" xml:space="preserve">
+    <value>Мы смогли ответить на ваш вопрос?</value>
+  </data>
+  <data name="FeedbackThanksMessage" xml:space="preserve">
+    <value>Спасибо за ваш отзыв!</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Отлично! Из какого города вы хотите выехать?</value>
+  </data>
+  <data name="FromField" xml:space="preserve">
+    <value>Город отправления:</value>
+  </data>
+  <data name="HelpMessage" xml:space="preserve">
+    <value>Чем еще я могу вам помочь?</value>
   </data>
   <data name="IntroMessage" xml:space="preserve">
     <value>Я бот-помощник сервиса TakeBus!</value>
   </data>
-  <data name="MenuSubtitle" xml:space="preserve">
-    <value>Выберите одну из опций или напишите мне свой вопрос:</value>
+  <data name="No" xml:space="preserve">
+    <value>Нет</value>
   </data>
-  <data name="MenuTitle" xml:space="preserve">
-    <value>Чем еще я могу вам помочь?</value>
+  <data name="NoAnswerCard" xml:space="preserve">
+    <value>Вы не нашли подходящий ответ?</value>
+  </data>
+  <data name="NoAnswerCardMessage" xml:space="preserve">
+    <value>Очень сожалеем! Позвоните нам по телефону x-xxx-xxx</value>
+  </data>
+  <data name="PossibleAnswerCard" xml:space="preserve">
+    <value>Подходящий ответ</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="SaveReply" xml:space="preserve">
+    <value>Спасибо за использование нашего сервиса!</value>
+  </data>
+  <data name="ThankYouMessage" xml:space="preserve">
+    <value>Спасибо! Обращайтесь еще.</value>
+  </data>
+  <data name="TicketTitle" xml:space="preserve">
+    <value>Ваш билет</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>В какое время?</value>
+  </data>
+  <data name="TimeField" xml:space="preserve">
+    <value>Время отправления:</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>А в какой город направляетесь?</value>
+  </data>
+  <data name="ToField" xml:space="preserve">
+    <value>Город прибытия:</value>
+  </data>
+  <data name="TryOptions" xml:space="preserve">
+    <value>Выберите одну из опций или напишите мне свой вопрос:</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
     <value>Добрый день!</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>2017 г.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
   </data>
   <data name="_aboutDialogCommand" xml:space="preserve">
     <value>Получить информацию о сервисе </value>
@@ -142,7 +214,7 @@
     <value>Завершить беседу</value>
   </data>
   <data name="_commonDialogCommand" xml:space="preserve">
-    <value>Узнать чем я могу помочь</value>
+    <value>Хочу узнать стоимость билета</value>
   </data>
   <data name="_supportDialogCommand" xml:space="preserve">
     <value>Связаться с call-центром</value>
