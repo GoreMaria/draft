@@ -277,11 +277,29 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Сервисный сбор.
+        /// </summary>
+        internal static string ServicePrice {
+            get {
+                return ResourceManager.GetString("ServicePrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Спасибо! Обращайтесь еще..
         /// </summary>
         internal static string ThankYouMessage {
             get {
                 return ResourceManager.GetString("ThankYouMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Стоимость билета.
+        /// </summary>
+        internal static string TIcketPrice {
+            get {
+                return ResourceManager.GetString("TIcketPrice", resourceCulture);
             }
         }
         

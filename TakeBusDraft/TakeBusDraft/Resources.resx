@@ -177,8 +177,14 @@
   <data name="SaveReply" xml:space="preserve">
     <value>Спасибо за использование нашего сервиса!</value>
   </data>
+  <data name="ServicePrice" xml:space="preserve">
+    <value>Сервисный сбор</value>
+  </data>
   <data name="ThankYouMessage" xml:space="preserve">
     <value>Спасибо! Обращайтесь еще.</value>
+  </data>
+  <data name="TIcketPrice" xml:space="preserve">
+    <value>Стоимость билета</value>
   </data>
   <data name="TicketTitle" xml:space="preserve">
     <value>Ваш билет</value>

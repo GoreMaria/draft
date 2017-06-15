@@ -86,8 +86,8 @@ namespace TakeBusDraft.Dialogs
                                                     new CardAction(ActionTypes.PostBack, title: Resources.Buy, value: Resources.Buy), // or OpenUrl
                                                     new CardAction(ActionTypes.PostBack, title: Resources.Save, value: Resources.Save)
                                                 },
-                                       items: new List<ReceiptItem> { new ReceiptItem() {Title = "Стоимость билета" },
-                                       new ReceiptItem() {Title = "Сервисный сбор" } },
+                                       items: new List<ReceiptItem> { new ReceiptItem() {Title = Resources.TIcketPrice },
+                                       new ReceiptItem() {Title = Resources.ServicePrice} },
                                        tap: new CardAction(ActionTypes.PostBack, title: Resources.Save, value: Resources.Save)
                                        );
 
