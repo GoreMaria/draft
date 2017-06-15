@@ -148,7 +148,7 @@ namespace TakeBusDraft.Dialogs
                 HttpRequestMessage req = new HttpRequestMessage(new HttpMethod("PATCH"), uri);
                 req.Content = content;
                 response = await client.SendAsync(req);
-            }
+            }           
         }
     }
 }

@@ -78,7 +78,7 @@ namespace TakeBusDraft.Dialogs
                                                  new Fact(Resources.FromField, newTicket.From),
                                                  new Fact(Resources.ToField, newTicket.To),
                                                  new Fact(Resources.DateField, newTicket.Date + Resources.Year),
-                                                 new Fact(Resources.TimeField, newTicket.Time) 
+                                                 new Fact(Resources.TimeField, newTicket.Time)
                                               },
                                        total: price.ToString() + Resources.Currency,
                                        buttons: new List<CardAction>
@@ -86,8 +86,8 @@ namespace TakeBusDraft.Dialogs
                                                     new CardAction(ActionTypes.PostBack, title: Resources.Buy, value: Resources.Buy), // or OpenUrl
                                                     new CardAction(ActionTypes.PostBack, title: Resources.Save, value: Resources.Save)
                                                 },
-                                       items: new List<ReceiptItem> { new ReceiptItem() {Title = "Стоимость билета:" },
-                                       new ReceiptItem() {Title = "Сервисный сбор:" } },
+                                       items: new List<ReceiptItem> { new ReceiptItem() {Title = "Стоимость билета" },
+                                       new ReceiptItem() {Title = "Сервисный сбор" } },
                                        tap: new CardAction(ActionTypes.PostBack, title: Resources.Save, value: Resources.Save)
                                        );
 
@@ -106,7 +106,7 @@ namespace TakeBusDraft.Dialogs
         {
             var response = await result;
 
-            if (response.Text == Resources.BuyReply)
+            if (response.Text == Resources.Buy)
                 //stub
                 await context.PostAsync(Resources.BuyReply);
             else
