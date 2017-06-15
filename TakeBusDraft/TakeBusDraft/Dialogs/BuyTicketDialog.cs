@@ -72,14 +72,14 @@ namespace TakeBusDraft.Dialogs
 
             var price = newTicket.CalculatePrice();
 
-            var ticketReceipt = new ReceiptCard(title: Resources.TicketTitle,
-                                       facts: new List<Fact>
-                                              {
-                                                 new Fact(Resources.FromField, newTicket.From),
-                                                 new Fact(Resources.ToField, newTicket.To),
-                                                 new Fact(Resources.DateField, newTicket.Date + Resources.Year),
-                                                 new Fact(Resources.TimeField, newTicket.Time) }
-                                       //       },
+            var ticketReceipt = new ReceiptCard(title: Resources.TicketTitle//,
+                                       //facts: new List<Fact>
+                                       //       {
+                                       //          new Fact(Resources.FromField, newTicket.From),
+                                       //          new Fact(Resources.ToField, newTicket.To),
+                                       //          new Fact(Resources.DateField, newTicket.Date + Resources.Year),
+                                       //          new Fact(Resources.TimeField, newTicket.Time) }
+                                       ////       },
                                        //total: price.ToString() + Resources.Currency,
                                        //buttons: new List<CardAction>
                                        //         {
