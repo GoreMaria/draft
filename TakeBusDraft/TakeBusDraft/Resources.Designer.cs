@@ -133,7 +133,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to руб..
+        ///   Looks up a localized string similar to  руб..
         /// </summary>
         internal static string Currency {
             get {
@@ -151,7 +151,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Дата поездки:.
+        ///   Looks up a localized string similar to Дата поездки.
         /// </summary>
         internal static string DateField {
             get {
@@ -196,7 +196,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Город отправления:.
+        ///   Looks up a localized string similar to Город отправления.
         /// </summary>
         internal static string FromField {
             get {
@@ -304,7 +304,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Время отправления:.
+        ///   Looks up a localized string similar to Время отправления.
         /// </summary>
         internal static string TimeField {
             get {
@@ -322,7 +322,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Город прибытия:.
+        ///   Looks up a localized string similar to Город прибытия.
         /// </summary>
         internal static string ToField {
             get {
@@ -349,7 +349,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2017 г..
+        ///   Looks up a localized string similar to  2017 г..
         /// </summary>
         internal static string Year {
             get {

@@ -72,7 +72,7 @@ namespace TakeBusDraft.Dialogs
 
             var price = newTicket.CalculatePrice();
 
-            var ticketReceipt = new ReceiptCard(title: "Новая карточка",
+            var ticketReceipt = new ReceiptCard(title: Resources.TicketTitle,
                                        facts: new List<Fact>
                                               {
                                                  new Fact(Resources.FromField, newTicket.From),
@@ -86,10 +86,9 @@ namespace TakeBusDraft.Dialogs
                                                     new CardAction(ActionTypes.PostBack, title: Resources.Buy, value: Resources.Buy), // or OpenUrl
                                                     new CardAction(ActionTypes.PostBack, title: Resources.Save, value: Resources.Save)
                                                 },
-                                       items: new List<ReceiptItem> { new ReceiptItem() {Title = "Item" } },
+                                       items: new List<ReceiptItem> { new ReceiptItem() {Title = "Стоимость билета:" },
+                                       new ReceiptItem() {Title = "Сервисный сбор:" } },
                                        tap: new CardAction(ActionTypes.PostBack, title: Resources.Save, value: Resources.Save),
-                                       tax: "10%",
-                                       vat: "10%"
                                        );
 
             var message = context.MakeMessage();
