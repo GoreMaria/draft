@@ -70,7 +70,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Завершить беседу.
+        ///   Looks up a localized string similar to Завершить.
         /// </summary>
         internal static string _cancelDialogCommand {
             get {
@@ -79,7 +79,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Хочу узнать стоимость билета.
+        ///   Looks up a localized string similar to Стоимость билета.
         /// </summary>
         internal static string _commonDialogCommand {
             get {
@@ -88,7 +88,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Связаться с call-центром.
+        ///   Looks up a localized string similar to Сall-центр.
         /// </summary>
         internal static string _supportDialogCommand {
             get {
@@ -250,7 +250,7 @@ namespace TakeBusDraft {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Подходящий ответ.
+        ///   Looks up a localized string similar to Еще подходящий вариант.
         /// </summary>
         internal static string PossibleAnswerCard {
             get {

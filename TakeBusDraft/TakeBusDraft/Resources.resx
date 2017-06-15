@@ -169,7 +169,7 @@
     <value>Очень сожалеем! Позвоните нам по телефону x-xxx-xxx</value>
   </data>
   <data name="PossibleAnswerCard" xml:space="preserve">
-    <value>Подходящий ответ</value>
+    <value>Еще подходящий вариант</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Сохранить</value>
@@ -211,12 +211,12 @@
     <value>Получить информацию о сервисе </value>
   </data>
   <data name="_cancelDialogCommand" xml:space="preserve">
-    <value>Завершить беседу</value>
+    <value>Завершить</value>
   </data>
   <data name="_commonDialogCommand" xml:space="preserve">
-    <value>Хочу узнать стоимость билета</value>
+    <value>Стоимость билета</value>
   </data>
   <data name="_supportDialogCommand" xml:space="preserve">
-    <value>Связаться с call-центром</value>
+    <value>Сall-центр</value>
   </data>
 </root>

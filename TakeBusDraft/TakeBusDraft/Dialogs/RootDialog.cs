@@ -77,7 +77,7 @@ namespace TakeBusDraft.Dialogs
                 if (response.Text.Contains("хорошо") || response.Text.Contains("спасибо") || response.Text.Contains("до свидания") || response.Text.Contains("ничем"))
                 {
                     await context.PostAsync(Resources.ThankYouMessage);
-                   // context.Done<object>(null);
+                   context.Done<object>(null);
                 }
                 else
                 {
