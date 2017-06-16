@@ -4,6 +4,8 @@ This repository contains solution that impements a simple trainable faq bot-assi
 
 Bot contonuously trained itself according to feedbacks provided from users. If an answer doesn't match user's expectation, the bot provides a top 3 answers from knowledge base and aks to chose appropriate. The result sends back to knowledge base.
 
+Test bot [prototype in Telegram](https://t.me/tbus_bot). (Ru)
+
 ### Solution overview:
 - QnA Maker gets and parses simple FAQ page in QnA pairs. 
 - *Searcher* class connects to knowledge base hosted on qnamker service and posts the request
@@ -26,5 +28,3 @@ Bot contonuously trained itself according to feedbacks provided from users. If a
 4. Go to [dev.botframework.com](dev.botframework.com) and register your bot 
 5. Put Microsoft App ID & Microsoft App Password from previous step to WebConfig
 6. Deploy your bot, e.g. using *deployment options* tab to connect your repo
-
-Test bot [prototype in Telegram](https://t.me/tbus_bot). (Ru)
