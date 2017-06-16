@@ -27,6 +27,4 @@ Bot contonuously trained itself according to feedbacks provided from users. If a
 5. Put Microsoft App ID & Microsoft App Password from previous step to WebConfig
 6. Deploy your bot, e.g. using *deployment options* tab to connect your repo
 
-Test bot prototype in Telegram. (Ru)
-
-
+Test bot [prototype in Telegram](https://t.me/tbus_bot). (Ru)
